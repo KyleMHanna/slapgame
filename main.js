@@ -116,6 +116,18 @@ function reload(){
     window.location.reload(true)
 }
 
+// function randomSelector() {
+    // let selector= Math.floor(Math.random()*3)
+    
+    // switch(selector){
+        // case 0:
+        // case 1:
+            // return 'punch'
+        // case 2:
+        // case 3:
+            // return 'kick'
+        // }
+// }
 
 function P2Atk(atk){
     switch(atk){
