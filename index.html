@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlapGame</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+</head>
+
+<style>   
+ /* This is for wire framing to see our rows/columns */
+ body.debug .container,
+        body.debug .container-fluid {
+          outline: 2px double blue;
+          outline-offset: -2px;
+        }
+        body.debug .row {
+          outline: 2px dashed red;
+          outline-offset: -2px;
+        }
+        body.debug [class*="col-"] {
+          outline: 2px dotted forestgreen;
+          outline-offset: -3px;
+        }
+</style>
+<!-- Header -->
+<header class="debug">  
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-1 ">
+            
+          </div>
+            <div class="col-md-10 py-4 text-center bg-danger">
+                <h2>INSTRUCTOR THROW DOWN</h2>
+            </div>
+            <div class="col-md-1">
+            
+            </div>
+        </div>
+    </div>
+</header>
+
+<body class="container-fluid"  id="Background">
+    
+<main>
+<div class="visually-hidden" id="health-info">
+
+  <!-- NOTE PLAYER NAME -->
+  <div class="row justify-content-around">
+    <div class="col-md-4 my-2 text-center py-2">
+      <h5>Jake</h5>
+    </div>
+    <div class="col-md-4 my-2 text-center py-2">
+      <h5>Mark</h5>
+    </div>
+  </div>
+  
+  <!-- NOTE PLAYER HEALTH BAR -->
+  <div class="row justify-content-around text-light">
+    <div class="col-md-4 my-2 text-center py-2" id="Play1Health">
+      <h5>player1 health bar</h5>
+      <!-- TODO PUT HEALTH BAR -->
+    </div>
+    <div class="col-md-4 my-2 text-center py-2" id="Play2Health">
+      <h5>player2 health bar</h5>
+      <!-- TODO PUT HEALTH BAR --> 
+    </div>
+  </div>
+  
+</div>
+  <!-- POP UP SECTION -->
+  <div class="row text-center m-5 py-5">
+    <div class="col-12 " id='start-button'>
+      <button onclick="startGame()"  id="popup-message" class="btn border shadow bg-dark text-white">START</button>
+    </div>
+  </div>
+
+
+
+  
+  <!-- PLAYTER SECTION -->
+  <div class="row text-center justify-content-around visually-hidden" id="staff-imgs">
+    <div class="col-md-5">
+      <img src="https://codeworks.blob.core.windows.net/public/assets/img/staff/jake-min.jpg" alt="" class="imgSize">     
+    </div>
+    <!-- TODO PUT PLAYER IMGS DYNAMIC -->
+    <div class="col-md-5">
+      <img src="https://codeworks.blob.core.windows.net/public/assets/img/staff/mark-min.jpg" alt="" class="imgSize">
+    </div>
+  </div>
+  
+
+</main>
+
+<footer class="sticky-bottom">
+  <div class="container-fluid visually-hidden"  id="fight-buttons">
+    
+    <div class="row  ">
+      <div class="col-md-6 justify-content-center">
+        <div class="row">
+          <div class="col-md-6 text-center my-2">
+            <button onclick="P1Atk('punch')" class="btn border shadow bg-dark text-white">P1 Punch</button>
+          </div>
+          <div class="col-md-6 text-center my-2">
+            <button onclick="P1Atk('kick')" class="btn border shadow bg-dark text-white">P1 Kick</button>
+          </div>
+
+          <div class="col-12 text-center my-2">
+            <button onclick="jakesMessage()" class="btn border shadow bg-dark text-white">Isn't that neat?</button>
+            </div>        
+          </div>
+        </div>
+        <div class="col-md-6 justify-content-center">
+          <div class="row">
+            <div class="col-md-6 text-center my-2">
+              <button onclick="P2Atk('punch')" class="btn border shadow bg-dark text-white">P2 Punch</button>
+            </div>
+            <div class="col-md-6 text-center my-2">
+              <button onclick="P2Atk('kick')" class="btn border shadow bg-dark text-white">P2 Kick</button>
+            </div>
+          
+            <div class="col-12 text-center my-2">
+              <button  onclick="marksMessage()" class="btn border shadow bg-dark text-white">Nailed It!</button>
+            </div>        
+          </div>
+        </div>
+      </div>
+    </div>
+    </footer>
+
+    
+
+<!-- linking java  -->
+<script src="main.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

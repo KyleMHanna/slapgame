@@ -1,0 +1,9 @@
+#Background{
+    background-image: url(https://wallpaperaccess.com/full/629604.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+.imgSize{
+    height: 300px;
+    width: 300px;
+}
